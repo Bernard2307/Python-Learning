@@ -1,0 +1,14 @@
+# Navegue até o diretório do seu projeto
+cd caminho/do/seu/projeto
+
+# Verifique as alterações
+git status
+
+# Adicione as alterações ao staging area (substitua '.' pelo nome dos arquivos, se necessário)
+git add .
+
+# Faça o commit das alterações com uma mensagem descritiva
+git commit -m "Sua mensagem de commit aqui"
+
+# Envie as alterações para o repositório remoto (substitua 'main' pelo nome do seu branch, se necessário)
+git push origin main
