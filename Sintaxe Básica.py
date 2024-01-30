@@ -118,3 +118,42 @@ print(numeros_quadrados)
 #title para colocar a primeira letra em caixa alta
 name = str(input("Qual o seu nome?: "))
 print(nome.strip().title())
+
+#Lambida e Map
+#Map retorna dados
+import math
+def area(r):
+    return math.pi * (r**2)
+
+raios = [2, 5, 8, 12]
+
+areas = map(area,raios)
+print(list(areas))
+
+#criar uma lambida e passar função para converter Celsius em Fhereient 
+# f = 9/5 * c + 32 
+
+cidades = [('berlim',29), ('san francisco',34), ('dacota johnson',31), ('limona',21)]
+c_para_f = lambda dado: (dado[0].title(), (9/5) * dado[1] + 32)
+
+print(list(map(c_para_f,cidades)))
+
+#Filter
+#Filtra dados de uma coleção
+#Nesse caso ele está filtrando apenas os dados que existem
+#retorna booleam
+paises = ['','Brasil', 'Argentina', 'Coreia', '', 'Chile', '']
+res = filter(None, paises)
+print(list(res))
+
+usuarios = [
+    {"username": "be_o_baiano", "twettes": ["Eu adoro games"]},
+    {"username": "tryhard", "twettes": ["Vamos estudar"]},
+    {"username": "nakita123", "twettes": []},
+    {"username": "spikenot", "twettes": []}
+]
+
+t = lambda usuario: len(usuario['twettes']) == 0
+
+inativos = list(filter(t,usuarios))
+print(inativos)
