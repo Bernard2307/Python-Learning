@@ -3,7 +3,7 @@ import subprocess
 
 ''''comits
 
-Adicionar opção de verificar lista de compras após adição dos mantimentos
+Se a fruta/alimento que for removido não tiver sido adicionado, retorna informação para o usuario
 
     comits
 '''
@@ -32,9 +32,9 @@ def estoque(tipo):
 #SYSTEM OF PROGRAM
 def sistema():
     os.system('cls')
-    op_user = int(input("ESCOLHA UMA OPÇÃO ABAIXO\n\n1-VERIFICAR ESTOQUE\n2-ADICIONAR ALIMENTO\n3-REMOVER ALIMENTO\n4-VERIFICAR PREÇO DO ALIMENTO\n5-SAIR\n\nOPÇÃO ESCOLHIDA: "))
+    op_user = int(input("ESCOLHA UMA OPÇÃO ABAIXO\n\n1-VERIFICAR ESTOQUE\n2-ADICIONAR ALIMENTO\n3-REMOVER ALIMENTO\n4-VERIFICAR PREÇO DO ALIMENTO\n5-VER CARRINHO DE COMPRAS\n6-SAIR\n\nOPÇÃO ESCOLHIDA: "))
 
-    while op_user != 5: 
+    while op_user != 6: 
         match op_user:
             case 1: # check stock 
                 op_vef_estoque = int(input("1-VERIFICAR ESTOQUE ALIMENTOS\n2-VERIFICAR ESTOQUE FRUTAS\nOPÇÃO ESCOLHIDA: "))
@@ -60,6 +60,21 @@ def sistema():
                     else:
                         print("Opção invalida")
                     print(f"{lista_compras}")
+
+                elif op_add_food == 2:
+                    op_alimentos = int(input("1-Carne\n2-Arroz\n3-Feijão\n4-Queijo\nOPÇÃO ESCOLHIDA: "))
+
+                    if op_alimentos == 1:
+                        lista_compras.append('Carne')
+                    elif op_alimentos == 2:
+                        lista_compras.append('Arroz')
+                    elif op_alimentos == 3:
+                        lista_compras.append('Feijão')
+                    elif op_alimentos == 4:
+                        lista_compras.append('Queijo')
+
+                else:
+                    print("Opção inválida, digite uma opção valida")
 
             case 3: #remove food
                 op_pop_food = int(input("1-FRUTAS\n2-ALIMENTO\nOPÇÃO ESCOLHIDA: "))
@@ -88,13 +103,16 @@ def sistema():
                     print("Opção invalida")
             
             case 5:
+                print(lista_compras)
+
+            case 6:
                 os.system("cls")
                 print("PRGORAMA ENCERRADO")
                 subprocess.run("exit", shell=True)
 
         input("Aperte enter para continuar...")
         os.system("cls")        
-        op_user = int(input("ESCOLHA UMA OPÇÃO ABAIXO\n\n1-VERIFICAR ESTOQUE\n2-ADICIONAR ALIMENTO\n3-REMOVER ALIMENTO\n4-VERIFICAR PREÇO DO ALIMENTO\n5-SAIR\n\nOPÇÃO ESCOLHIDA: "))
+        op_user = int(input("ESCOLHA UMA OPÇÃO ABAIXO\n\n1-VERIFICAR ESTOQUE\n2-ADICIONAR ALIMENTO\n3-REMOVER ALIMENTO\n4-VERIFICAR PREÇO DO ALIMENTO\n5-VER CARRINHO DE COMPRAS\n6-SAIR\n\nOPÇÃO ESCOLHIDA: "))
 
 #MAIN
 sistema()

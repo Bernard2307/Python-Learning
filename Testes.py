@@ -1,11 +1,7 @@
-usuarios = [
-    {"username": "be_o_baiano", "twettes": ["Eu adoro games"]},
-    {"username": "tryhard", "twettes": ["Vamos estudar"]},
-    {"username": "nakita123", "twettes": []},
-    {"username": "spikenot", "twettes": []}
-]
+import os
+a = 2
+b = 4.5
 
-t = lambda usuario: len(usuario['twettes']) == 0
+print(type(a))
+print(type(b))
 
-inativos = list(filter(t,usuarios))
-print(inativos)

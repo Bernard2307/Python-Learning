@@ -157,3 +157,39 @@ t = lambda usuario: len(usuario['twettes']) == 0
 
 inativos = list(filter(t,usuarios))
 print(inativos)
+
+#ALL e ANY
+#Retorna um valor booleano de acordo com o interavel 
+
+nomes = ['Pedro', 'Carlos', 'Beatriz', 'Bernard']
+print(all([nome[0] == 'B' for nome in nomes]))
+print(any([nome[0] == 'B' for nome in nomes]))
+
+#SORTED - Cria uma nova lista e retorna ordenadamente 
+numeros = [1,4,3,2,5]
+print(sorted(numeros))
+print(numeros)
+
+#ordenando uma lista
+#podemos atribuir um parametro (key) no sorted para que ele ordene baseado no parametro
+usuarios = [
+    {"username": "carlos_o_tryhard", "twettes": ["Eu adoro games"]},
+    {"username": "be_o_baiano", "twettes": ["Vamos estudar"]},
+    {"username": "ericles_o_vendedor", "twettes": []},
+    {"username": "diego_o_agiota", "twettes": []}
+]
+
+ordem = lambda usuario: usuario["username"]
+print(sorted(usuarios, key=ordem))
+
+#variação do sorted
+#aqui eu atribuo as lambdas em variaveis, bem como a função sorted, depois chamo no for e uso ele para monstar apenas o nome de usuario - nesse caso, a logica é ordenar em ordem alfabetica, mas pode ser com número também
+twwets_ordem = lambda usuario: len(usuario['twettes']) == 0
+
+user_ordem = lambda usuario: usuario["username"]
+
+ordenar = sorted(usuarios, key=user_ordem)
+
+for user in ordenar:
+    print(user['username'])
+
