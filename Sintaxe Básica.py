@@ -57,139 +57,23 @@ desativado = False
 print(not ativado)
 print(not desativado)
 
-#Funções
-#Quando atribuimos um valor à um parâmentro da função, o parâmetro passar a ser opcional
-def soma(p1,p2=2):
-    return p1*p2 
+#tratamento de erro com raise
 
-#list comprehension
-#consiste em pegar uma lista e simplificar o seu reajuste
+def colore (texto, cor): 
+    cores = {'verde', 'preto', 'amarelo', 'azul'}
+    if type(texto) is not str:
+        raise TypeError('Texto precisa ser uma string')
+    if type(cor) is not str:
+        raise TypeError('Cor precisa ser uma string')
+    print(f"O texto {texto} será impresso na cor {cor}")
 
-lista_produtos:['Celular','Tablet','Laptop']
-lista_precos_produtos:[100,200,300]
-lista_reajuste_preco_produtos:[preco*1.1 for preco in lista_precos_produtos]
+    if cor not in cores:
+        raise ValueError(f'Cor não existe na lista\nPrecisa estar entre {cores}')
 
-#podemos aproveitar uma lista para gerar outra lista ou manipular com outros comandos, como por exemplo uma função
-list_of_numbers = [2,4,6,8]
-def elevation(valor):
-    return valor * valor
+colore('Pablo','Verde')
 
-res = [elevation(number) for number in list_of_numbers]
-print(res)
-
-#if direto
-faturamento = 200
-bonus = 100 if faturamento > 500 else 50 
-print(bonus)
-
-#switch case do python
-x = 1
-match x:
-    case 1:
-        print("Domingo")
-    case 2:
-        print("Segunda")
-    case _:
-        print("Qualquer dia")
-
-#uso de ARGS 
-#podemos passar qualquer tipo de dado dentro nessa função
-def names(*args):
-    return args
-
-print(names())
-
-#numero pares e impares com comprehension 
-list_of_numbers = [1,2,3,4,5,6,7,8]
-
-pares = [numeros for numeros in list_of_numbers if numeros % 2 == 0]
-impares = [numeros for numeros in list_of_numbers if numeros % 2 != 0]
-
-print(pares)
-print(impares)
-
-#dictionary comprehension 
-numeros = {'A':2, 'B':3, 'C':4}
-numeros_quadrados = {chave:valor **2 for chave,valor in numeros.items()}
-print(numeros_quadrados)
-
-#strip and title
-#strip para tirar espaços do inicio e final
-#title para colocar a primeira letra em caixa alta
-name = str(input("Qual o seu nome?: "))
-print(nome.strip().title())
-
-#Lambida e Map
-#Map retorna dados
-import math
-def area(r):
-    return math.pi * (r**2)
-
-raios = [2, 5, 8, 12]
-
-areas = map(area,raios)
-print(list(areas))
-
-#criar uma lambida e passar função para converter Celsius em Fhereient 
-# f = 9/5 * c + 32 
-
-cidades = [('berlim',29), ('san francisco',34), ('dacota johnson',31), ('limona',21)]
-c_para_f = lambda dado: (dado[0].title(), (9/5) * dado[1] + 32)
-
-print(list(map(c_para_f,cidades)))
-
-#Filter
-#Filtra dados de uma coleção
-#Nesse caso ele está filtrando apenas os dados que existem
-#retorna booleam
-paises = ['','Brasil', 'Argentina', 'Coreia', '', 'Chile', '']
-res = filter(None, paises)
-print(list(res))
-
-usuarios = [
-    {"username": "be_o_baiano", "twettes": ["Eu adoro games"]},
-    {"username": "tryhard", "twettes": ["Vamos estudar"]},
-    {"username": "nakita123", "twettes": []},
-    {"username": "spikenot", "twettes": []}
-]
-
-t = lambda usuario: len(usuario['twettes']) == 0
-
-inativos = list(filter(t,usuarios))
-print(inativos)
-
-#ALL e ANY
-#Retorna um valor booleano de acordo com o interavel 
-
-nomes = ['Pedro', 'Carlos', 'Beatriz', 'Bernard']
-print(all([nome[0] == 'B' for nome in nomes]))
-print(any([nome[0] == 'B' for nome in nomes]))
-
-#SORTED - Cria uma nova lista e retorna ordenadamente 
-numeros = [1,4,3,2,5]
-print(sorted(numeros))
-print(numeros)
-
-#ordenando uma lista
-#podemos atribuir um parametro (key) no sorted para que ele ordene baseado no parametro
-usuarios = [
-    {"username": "carlos_o_tryhard", "twettes": ["Eu adoro games"]},
-    {"username": "be_o_baiano", "twettes": ["Vamos estudar"]},
-    {"username": "ericles_o_vendedor", "twettes": []},
-    {"username": "diego_o_agiota", "twettes": []}
-]
-
-ordem = lambda usuario: usuario["username"]
-print(sorted(usuarios, key=ordem))
-
-#variação do sorted
-#aqui eu atribuo as lambdas em variaveis, bem como a função sorted, depois chamo no for e uso ele para monstar apenas o nome de usuario - nesse caso, a logica é ordenar em ordem alfabetica, mas pode ser com número também
-twwets_ordem = lambda usuario: len(usuario['twettes']) == 0
-
-user_ordem = lambda usuario: usuario["username"]
-
-ordenar = sorted(usuarios, key=user_ordem)
-
-for user in ordenar:
-    print(user['username'])
-
+#tratando erro com TRY and EXCEPT 
+try:
+    bernard()
+except:
+    print("Houve um erro")
