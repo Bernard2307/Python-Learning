@@ -1,26 +1,54 @@
-    Este contrato de prestação de serviços é feito entre [NOME EMPRESA], com endereço em [ENDEREÇO], 
-    [CIDADE], [ESTADO], CEP [CEP], doravante denominado FORNECEDOR, e a empresa CONTRATANTE.
+**Contrato de Fornecimento**
 
-    Pelo presente instrumento particular, as partes têm, entre si, justo e acordado o seguinte:
+Este contrato é celebrado em [data], entre:
 
-    1. OBJETO DO CONTRATO
-    O FORNECEDOR compromete-se a fornecer à CONTRATANTE os serviços/material de acordo com as especificações acordadas, respeitando os padrões de qualidade e os prazos estipulados.
+**FORNECEDOR:**
+Nome: [Nome do Fornecedor]
+CNPJ: [Número do CNPJ do Fornecedor]
+Localidade: [Endereço completo do Fornecedor]
 
-    2. PRAZO
-    Este contrato tem prazo de vigência de 12 (doze) meses, iniciando-se na data de sua assinatura, podendo ser renovado conforme acordo entre as partes.
+E
 
-    3. VALOR E FORMA DE PAGAMENTO
-    O valor dos serviços prestados será acordado conforme as demandas da CONTRATANTE e a capacidade de entrega do FORNECEDOR. Os pagamentos serão realizados mensalmente, mediante apresentação de nota fiscal.
+**COMPRADOR:**
+Nome: [Nome do Comprador]
+Endereço: [Endereço completo do Comprador]
 
-    4. CONFIDENCIALIDADE
-    Todas as informações trocadas entre as partes durante a vigência deste contrato serão tratadas como confidenciais.
+**Objeto do Contrato:**
 
-    Para firmeza e como prova de assim haverem justo e contratado, as partes assinam o presente contrato em duas vias de igual teor e forma.
+O Fornecedor concorda em fornecer os seguintes produtos ao Comprador:
 
-    FORNECEDOR: [NOME FORNECEDOR]
-    E-mail: [E-MAIL PRESTADOR]
+- Tipo de Produto: [Descreva o tipo de produto]
 
-    CONTRATANTE: BLDNA TECH SA 
-    E-mail: bldnatechsa@gmail.com
+**Termos e Condições:**
 
-    Petrolina,[DATA]
+1. **Preço:** O preço total acordado para os produtos é de [valor em moeda local]. O pagamento será efetuado de acordo com os termos estabelecidos pelas partes.
+
+2. **Entrega:** O Fornecedor concorda em entregar os produtos no endereço do Comprador conforme acordado pelas partes.
+
+3. **Prazo de Entrega:** O prazo de entrega será acordado entre as partes no momento da confirmação do pedido.
+
+4. **Condições de Pagamento:** As condições de pagamento serão [descreva as condições, por exemplo: pagamento à vista, pagamento parcelado, etc.].
+
+5. **Garantia:** O Fornecedor garante que os produtos fornecidos estão livres de defeitos de material e mão de obra pelo período de [duração da garantia].
+
+6. **Rescisão:** Em caso de rescisão deste contrato por qualquer motivo, as partes concordam em cumprir com quaisquer obrigações financeiras pendentes.
+
+As partes concordam com os termos e condições acima mediante a assinatura deste contrato.
+
+**FORNECEDOR:**
+
+Assinatura: ___________________________
+
+Nome: ________________________________
+
+Data: _________________________________
+
+**COMPRADOR:**
+
+Assinatura: ___________________________
+
+Nome: ________________________________
+
+Data: _________________________________
+
+Este contrato é válido a partir da data de assinatura pelas partes.
