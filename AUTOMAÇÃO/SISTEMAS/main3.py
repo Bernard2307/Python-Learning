@@ -22,6 +22,6 @@ while True:
         janela['1'].update('')
         janela['2'].update('')
         janela['3'].update('')
-        janela['4'].update('')
+        
     
 
