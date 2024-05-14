@@ -6,7 +6,7 @@ style = [
     [sg.Text('Cliente'),sg.Input(key='1')],
     [sg.Text('Produto'),sg.Input(key='2')],
     [sg.Text('Quantidade'),sg.Input(key='3')],
-    [sg.Text('Pagamento'),sg.Input(key='4')],
+    [sg.Text('Categoria'),sg.Input(key='4')],
     [sg.Button('Salvar')],
     [sg.Text('',key='mensagem')],
 ]
