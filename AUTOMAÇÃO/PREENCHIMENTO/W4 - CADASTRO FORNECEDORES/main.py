@@ -7,13 +7,14 @@ planilha_fornecedores = planilha['vendas']
 for linha in planilha_fornecedores.iter_rows(min_row=2,max_row=6,values_only=True):
     cliente, produto, quantidade, categoria = linha 
 
-    pyautogui.click(567,345,duration=0)
+    pyautogui.click(723,344,duration=0)
     pyautogui.write(cliente)
-    pyautogui.click(575,373,duration=0)
+    pyautogui.click(717,371,duration=0)
     pyautogui.write(produto)
-    pyautogui.click(599,402,duration=0)
+    pyautogui.click(713,402,duration=0)
     pyautogui.write(str(quantidade))
-    pyautogui.click(599,424,duration=0)
+    pyautogui.click(712,423,duration=0)
     pyautogui.write(categoria)
-    pyautogui.click(514,453,duration=0) #btn salvar
-    pyautogui.click(660,425,duration=1) #btn ok
+    pyautogui.click(690,455,duration=0) #btn salvar
+    pyautogui.click(664,426,duration=1) #btn ok
+
