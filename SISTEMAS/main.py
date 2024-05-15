@@ -8,7 +8,6 @@ style = [
     [sg.Text('Quantidade'),sg.Input(key='3')],
     [sg.Text('Categoria'),sg.Input(key='4')],
     [sg.Button('Salvar')],
-    [sg.Text('',key='mensagem')],
 ]
 
 janela = sg.Window('Sistema de cadastro BLDAN', layout=style)
